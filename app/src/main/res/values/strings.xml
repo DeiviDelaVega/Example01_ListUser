@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Example01_ListUsers</string>
+
+    <string name="add_players">AÑADIR USUARIOS</string>
+
+    //TextView
+    <string name="add_players_name">Nombre:</string>
+    <string name="add_players_last">Apellido:</string>
+    <string name="add_players_DNI">DNI:</string>
+    <string name="add_players_phone">Teléfono:</string>
+    <string name="add_players_email">Correo:</string>
+
+    //Button
+    <string name="button_add">AGREGAR</string>
+
+    //Item
+    <string name="item_name">Deivi De la Vega</string>
+    <string name="item_button_name">Ver</string>
 </resources>

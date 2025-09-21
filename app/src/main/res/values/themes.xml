@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.Example01_ListUsers" parent="Base.Theme.Example01_ListUsers" />
+
+    <style name="Circular">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
