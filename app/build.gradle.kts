@@ -40,6 +40,9 @@ dependencies {
     //RecyclerView
     implementation(libs.androidx.recyclerview)
 
+    //CardView
+    implementation(libs.androidx.cardview)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
