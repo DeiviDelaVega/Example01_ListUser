@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ListUsersActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".presentation.ListUsersActivity">
 
     <TextView
         android:id="@+id/frameTextAddPlayer"
@@ -14,17 +14,31 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/poppins_medium"
         android:gravity="center"
-        android:text="@string/add_players"
+        android:text="@string/list_players"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="36sp"
-        android:fontFamily="@font/poppins_medium"/>
+        android:textSize="36sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="27dp"
+        tools:listitem="@layout/item_users" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_back"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/item_users"
-        android:padding="27dp"/>
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/blue_black"
+        android:fontFamily="@font/poppins_medium"
+        android:padding="0dp"
+        android:text="@string/button_back"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:cornerRadius="12dp" />
 </LinearLayout>

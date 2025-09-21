@@ -21,5 +21,15 @@ class AddUserActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        navigateToListUsers()
+    }
+
+    fun navigateToListUsers() {
+
+        val button = findViewById<FloatingActionButton>(R.id.fab)
+        button.setOnClickListener {
+            val intent = Intent(this, ListUsersActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

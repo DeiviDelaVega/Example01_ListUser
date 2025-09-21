@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Example01_ListUsers</string>
 
-    <string name="add_players">AÑADIR USUARIOS</string>
+    <string name="add_players">AÑADIR USUARIO</string>
+    <string name="list_players">LISTAR USUARIO</string>
 
     //TextView
     <string name="add_players_name">Nombre:</string>
@@ -12,6 +13,7 @@
 
     //Button
     <string name="button_add">AGREGAR</string>
+    <string name="button_back">VOLVER</string>
 
     //Item
     <string name="item_name">Deivi De la Vega</string>

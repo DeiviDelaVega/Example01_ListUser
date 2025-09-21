@@ -1,5 +1,6 @@
 package com.example.example01_listusers.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,8 @@ import com.example.example01_listusers.R
 import androidx.recyclerview.widget.RecyclerView
 import com.example.example01_listusers.data.User
 import com.example.example01_listusers.adapter.UserAdapter
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListUsersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +25,7 @@ class ListUsersActivity : AppCompatActivity() {
             insets
         }
         listItemRecycler()
+        backButtonAddUser()
     }
 
     fun listItemRecycler() {
@@ -35,5 +39,13 @@ class ListUsersActivity : AppCompatActivity() {
         userAdapter.users = User.data
 
         recyclerView.setHasFixedSize(true)
+    }
+
+    fun backButtonAddUser() {
+        val button = findViewById<MaterialButton>(R.id.button_back)
+        button.setOnClickListener {
+            val intent = Intent(this, AddUserActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
