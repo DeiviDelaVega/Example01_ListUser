@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_corners"
         android:fontFamily="@font/poppins_medium"
@@ -24,13 +24,24 @@
         android:textColor="@color/white"
         android:textSize="36sp" />
 
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:drawableEnd="@drawable/ic_search_text"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:singleLine="true" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_weight="1"
         tools:listitem="@layout/item_users" />
 
     <com.google.android.material.button.MaterialButton

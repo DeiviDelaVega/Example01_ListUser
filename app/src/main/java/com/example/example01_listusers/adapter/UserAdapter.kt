@@ -11,11 +11,7 @@ import com.example.example01_listusers.data.User
 
 class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
-    var users = listOf<User>()
-        set(value) {
-            field = value
-            notifyItemChanged(users.size)
-        }
+    private var users: MutableList<User> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val view = LayoutInflater
@@ -37,6 +33,20 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
         return users.size
     }
 
+    fun updateUserList(newUsers: List<User>) {
+
+        val oldSize = this.users.size
+        if (oldSize > 0) {
+            this.users.clear()
+            notifyItemRangeRemoved(0, oldSize)
+        }
+
+        if (newUsers.isNotEmpty()) {
+            this.users.addAll(newUsers)
+            notifyItemRangeInserted(0, newUsers.size)
+        }
+    }
+
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val text: TextView = itemView.findViewById(R.id.text_item)
         val image: ImageView = itemView.findViewById(R.id.image_item)
@@ -45,7 +55,6 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
             text.text = user.name
             image.setImageResource(user.image)
         }
-
 
     }
 }

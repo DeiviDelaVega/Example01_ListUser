@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Example01_ListUsers">
         <activity
+            android:name=".presentation.DetailsUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.ListUsersActivity"
             android:exported="false" />
         <activity

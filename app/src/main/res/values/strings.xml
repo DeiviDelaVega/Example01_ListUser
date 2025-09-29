@@ -18,4 +18,7 @@
     //Item
     <string name="item_name">Deivi De la Vega</string>
     <string name="item_button_name">Ver</string>
+
+    //Dialog
+    <string name="dialog_title">¿Quieres agregar un nuevo usuario?</string>"
 </resources>
