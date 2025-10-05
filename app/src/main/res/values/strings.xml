@@ -21,4 +21,7 @@
 
     //Dialog
     <string name="dialog_title">¿Quieres agregar un nuevo usuario?</string>"
+
+    //DialogAlert
+    <string name="dialog_text_alert">ERROR TEXTO</string>"
 </resources>
