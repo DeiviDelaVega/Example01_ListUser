@@ -8,8 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.example01_listusers.R
 import com.example.example01_listusers.data.User
+import com.google.android.material.button.MaterialButton
 
-class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+class UserAdapter(
+    private val onButtonClick: (User) -> Unit
+) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     private var users: MutableList<User> = mutableListOf()
 
@@ -26,7 +29,7 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
         position: Int
     ) {
         val user = users[position]
-        holder.bind(user)
+        holder.bind(user, onButtonClick)
     }
 
     override fun getItemCount(): Int {
@@ -51,9 +54,16 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
         val text: TextView = itemView.findViewById(R.id.text_item)
         val image: ImageView = itemView.findViewById(R.id.image_item)
 
-        fun bind(user: User) {
+        val button: MaterialButton = itemView.findViewById(R.id.button_item)
+
+        fun bind(user: User, onButtonClick: (User) -> Unit) {
             text.text = user.name
             image.setImageResource(user.image)
+
+            button.setOnClickListener {
+                onButtonClick(user)
+
+            }
         }
 
     }

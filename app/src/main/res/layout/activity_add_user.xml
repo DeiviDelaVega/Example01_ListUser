@@ -199,6 +199,7 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="17dp"
         android:clickable="true"
+        tools:ignore="contentDescription"
         android:focusable="true"
         android:src="@drawable/person_icon"
         app:backgroundTint="@color/blue_medium"

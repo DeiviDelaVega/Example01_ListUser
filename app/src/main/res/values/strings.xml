@@ -24,4 +24,7 @@
 
     //DialogAlert
     <string name="dialog_text_alert">ERROR TEXTO</string>"
+
+    //Details User
+    <string name="details_user_text">DETALLE DEL USUARIO</string>
 </resources>
