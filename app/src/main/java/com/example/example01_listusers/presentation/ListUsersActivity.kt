@@ -36,7 +36,10 @@ class ListUsersActivity : AppCompatActivity() {
     fun listItemRecycler() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        adapter = UserAdapter()
+        adapter = UserAdapter( onButtonClick = {
+            val intent = Intent(this, DetailsUserActivity::class.java)
+            startActivity(intent)
+        })
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
